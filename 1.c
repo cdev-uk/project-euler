@@ -1,16 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <inttypes.h>
 
 int main() {
-    int sum = 0;
+    uint64_t sum = 0;
 
-    for (int n = 0; n < 1000; n++) {
+    for (uint16_t n = 0; n < 1000; n++) {
         if (n % 3 == 0 || n % 5 == 0) {
             sum += n;
         }
     }
 
-    printf("%d\n", sum);
+    printf("%" PRIu64 "\n", sum);
 
     return EXIT_SUCCESS;
 }
