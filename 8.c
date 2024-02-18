@@ -22,22 +22,22 @@ int main() {
 
     if (digits_read == DIGIT_COUNT) {
         do {
-            // 1. Calculate current product
+            // Calculate current product
             current_product = 1;
 
             for (int d = 0; d < DIGIT_COUNT; d++) {
                 current_product *= digits[d];
             }
 
-            // 2. Update largest product
             if (current_product > largest_product) {
                 largest_product = current_product;
             }
 
-            // 3. Get next character
             c = getchar();
 
             if (c != EOF && isdigit(c)) {
+                // Move all digits down one space, and
+                // add the latest one at the end
                 for (int d = 0; d < DIGIT_COUNT; d++) {
                     digits[d] = digits[d+1];
                 }
