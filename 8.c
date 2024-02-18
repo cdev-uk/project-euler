@@ -28,10 +28,7 @@ int main() {
             for (int d = 0; d < DIGIT_COUNT; d++) {
                 // Cast here is fine as a digit will always be unsigned
                 current_product *= (uint8_t) digits[d];
-                printf("%" PRIu8, digits[d]);
             }
-
-            printf(": %" PRIu64 "\n", current_product);
 
             // 2. Update largest product
             if (current_product > largest_product) {
