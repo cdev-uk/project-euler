@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -Werror -std=c89
+CFLAGS=-Wall -Wextra -Werror
 CC=clang
 LDLIBS=-lm
 
